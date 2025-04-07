@@ -1,0 +1,73 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-50 p-6 text-gray-800">
+      {/* Hero Section */}
+      <section className="text-center py-12">
+        <h1 className="text-4xl font-bold mb-4">Hi, I'm [Your Name] 👋</h1>
+        <p className="text-xl">DevOps Engineer | Cloud Enthusiast | Future AIOps & MLOps Expert</p>
+        <div className="flex justify-center gap-4 mt-4">
+          <Button variant="outline" asChild><a href="https://github.com/yourusername"><Github className="mr-2" /> GitHub</a></Button>
+          <Button variant="outline" asChild><a href="https://linkedin.com/in/yourprofile"><Linkedin className="mr-2" /> LinkedIn</a></Button>
+          <Button variant="outline" asChild><a href="mailto:youremail@example.com"><Mail className="mr-2" /> Email</a></Button>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-12">
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+        <p>
+          I'm a DevOps Engineer with 6.5+ years of experience, skilled in CI/CD, containerization,
+          Kubernetes, AWS, Azure, and passionate about integrating AI/ML into DevOps practices.
+          I'm currently expanding into AIOps and MLOps, while mastering Python automation.
+        </p>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-12">
+        <h2 className="text-2xl font-semibold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">DevOps Portfolio Project</h3>
+              <p className="mb-4">CI/CD pipeline with ArgoCD, Kubernetes, Terraform & Monitoring stack.</p>
+              <Button asChild variant="secondary"><a href="https://github.com/yourusername/devops-portfolio">View Project</a></Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">Python Automation Project</h3>
+              <p className="mb-4">Cloud provisioning automation using Python and AWS/Azure SDK.</p>
+              <Button asChild variant="secondary"><a href="https://github.com/yourusername/python-automation">View Project</a></Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">MLOps Workflow Project</h3>
+              <p className="mb-4">End-to-End MLOps pipeline with MLflow, FastAPI, and Prometheus.</p>
+              <Button asChild variant="secondary"><a href="https://github.com/yourusername/mlops-workflow">View Project</a></Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-12">
+        <h2 className="text-2xl font-semibold mb-4">Skills & Tools</h2>
+        <ul className="list-disc list-inside">
+          <li>Cloud: AWS, Azure</li>
+          <li>Containerization: Docker, Kubernetes</li>
+          <li>CI/CD: GitHub Actions, Jenkins, ArgoCD</li>
+          <li>IaC: Terraform, Pulumi</li>
+          <li>Monitoring: Prometheus, Grafana, SigNoz</li>
+          <li>Python Automation & Cloud SDKs</li>
+          <li>AIOps, MLOps (MLflow, FastAPI)</li>
+        </ul>
+      </section>
+    </div>
+  );
+}
